@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.user_interface.admin_interface.NewJobFieldPageController">
+    <padding>
+        <Insets bottom="30.0" left="100.0" right="100.0" top="30.0" />
+    </padding>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+    <Label alignment="CENTER" text="New Job Field">
+        <font>
+            <Font name="System Bold" size="30.0" />
+        </font>
+    </Label>
+   <VBox spacing="10.0">
+      <children>
+           <Label fx:id="titleLabel" minWidth="-Infinity" text="Job Field Title:">
+               <font>
+                   <Font size="14.0" />
+               </font>
+            <VBox.margin>
+               <Insets bottom="-5.0" />
+            </VBox.margin>
+           </Label>
+           <TextField fx:id="titleField" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" promptText="Enter Job Field Title" />
+           <Label fx:id="descriptionLabel" minWidth="-Infinity" text="Job Field Description:">
+               <font>
+                   <Font size="14.0" />
+               </font>
+            <VBox.margin>
+               <Insets bottom="-5.0" />
+            </VBox.margin>
+           </Label>
+           <TextArea fx:id="descriptionTextArea" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Enter Job Field Description" />
+           <Label fx:id="parentLabel" minWidth="-Infinity" text="Parent Job Field:">
+               <font>
+                   <Font size="14.0" />
+               </font>
+            <VBox.margin>
+               <Insets bottom="-5.0" />
+            </VBox.margin>
+           </Label>
+           <HBox spacing="10.0">
+               <children>
+                   <ComboBox fx:id="parentComboBox" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" HBox.hgrow="ALWAYS" />
+                   <Button focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#noneButtonClicked" prefHeight="40.0" text="None" />
+               </children>
+           </HBox>
+      </children>
+   </VBox>
+    <Separator prefWidth="200.0" />
+    <Region VBox.vgrow="SOMETIMES">
+        <VBox.margin>
+            <Insets />
+        </VBox.margin>
+    </Region>
+    <Button fx:id="registerJobFieldButton" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#registerJobFieldButtonClicked" prefHeight="40.0" prefWidth="160.0" text="Register Job Field" VBox.vgrow="NEVER">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Button>
+    <Label fx:id="resultLabel" text="Here a message is displayed!" VBox.vgrow="NEVER">
+        <VBox.margin>
+            <Insets bottom="-10.0" top="-10.0" />
+        </VBox.margin>
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
+</VBox>

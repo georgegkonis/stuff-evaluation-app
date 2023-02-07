@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainBorderPane" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.user_interface.MainWindowController">
+    <top>
+        <HBox alignment="CENTER_LEFT" fillHeight="false" spacing="10.0" style="-fx-background-color: #4747d1;" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="userTypeLabel" minHeight="-Infinity" minWidth="-Infinity" text="USER TYPE" textFill="#ffffffde" HBox.hgrow="NEVER">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </Label>
+                <Label fx:id="firstNameLabel" minHeight="-Infinity" minWidth="-Infinity" text="First Name" textFill="#ffffffde" HBox.hgrow="NEVER">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </Label>
+                <Label fx:id="lastNameLabel" minHeight="-Infinity" minWidth="-Infinity" text="Last Name" textFill="#ffffffde" HBox.hgrow="NEVER">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </Label>
+            <HBox alignment="TOP_RIGHT" spacing="10.0" HBox.hgrow="SOMETIMES">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <children>
+                      <Button alignment="CENTER" focusTraversable="false" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#accountButtonClicked" prefWidth="70.0" text="Account">
+                          <font>
+                              <Font name="System Bold" size="12.0" />
+                          </font>
+                      </Button>
+                      <Button alignment="CENTER" focusTraversable="false" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#logoutButtonClicked" prefWidth="70.0" text="Log Out" HBox.hgrow="NEVER">
+                          <HBox.margin>
+                              <Insets />
+                          </HBox.margin>
+                          <font>
+                              <Font name="System Bold" size="12.0" />
+                          </font>
+                      </Button>
+               </children>
+            </HBox>
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+            </padding>
+        </HBox>
+    </top>
+    <bottom>
+        <Pane style="-fx-background-color: #4747d1;" BorderPane.alignment="CENTER">
+            <children>
+                <Label minHeight="-Infinity" minWidth="-Infinity" text="Staff Evaluation V1.6" textFill="WHITE">
+                    <font>
+                        <Font size="10.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="5.0" left="10.0" top="5.0" />
+                    </padding>
+                </Label>
+            </children>
+        </Pane>
+    </bottom>
+    <center>
+        <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+    </center>
+</BorderPane>

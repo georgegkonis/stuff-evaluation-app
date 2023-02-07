@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.user_interface.admin_interface.NewUserPageController">
+    <children>
+        <Label alignment="CENTER" text="New User" VBox.vgrow="NEVER">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+        </Label>
+        <GridPane vgap="10.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" percentWidth="48.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" />
+                <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" percentWidth="48.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="NEVER" maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label layoutX="77.0" layoutY="70.0" text="Account Type:">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="-5.0" />
+                    </GridPane.margin>
+                </Label>
+                <ChoiceBox fx:id="userTypeChoiceBox" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                </ChoiceBox>
+                <Label text="First Name:" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets bottom="-5.0" />
+                    </GridPane.margin>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="firstNameField" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" promptText="Enter First Name" GridPane.rowIndex="3">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                </TextField>
+                <Label layoutX="77.0" layoutY="10.0" text="Last Name:" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="-5.0" />
+                    </GridPane.margin>
+                </Label>
+                <TextField fx:id="lastNameField" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" promptText="Enter Last Name" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                </TextField>
+                <Label text="Username:" GridPane.rowIndex="4">
+                    <GridPane.margin>
+                        <Insets bottom="-5.0" />
+                    </GridPane.margin>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="usernameField" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" promptText="Enter Username" GridPane.rowIndex="5">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                </TextField>
+                <Label text="Email:" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                    <GridPane.margin>
+                        <Insets bottom="-5.0" />
+                    </GridPane.margin>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="emailField" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" promptText="Enter Email" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                </TextField>
+                <Label text="Password:" GridPane.rowIndex="6">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="-5.0" />
+                    </GridPane.margin>
+                </Label>
+                <PasswordField fx:id="passwordField" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" promptText="Enter Password" GridPane.rowIndex="7">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                </PasswordField>
+                <Label text="Confirm Password:" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="-5.0" />
+                    </GridPane.margin>
+                </Label>
+                <PasswordField fx:id="passwordConfirmField" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" promptText="Re-Enter Password" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                </PasswordField>
+                <Label text="Company:" GridPane.rowIndex="8">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="-5.0" />
+                    </GridPane.margin>
+                </Label>
+                <ComboBox fx:id="companyComboBox" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" promptText="Select Company" GridPane.rowIndex="9">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                </ComboBox>
+                <Label text="Experience Years" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="-5.0" />
+                    </GridPane.margin>
+                </Label>
+                <Spinner fx:id="expYearsSpinner" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="120.0" GridPane.columnIndex="2" GridPane.rowIndex="9">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                </Spinner>
+            </children>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </GridPane>
+        <Separator VBox.vgrow="NEVER">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </Separator>
+        <Region VBox.vgrow="SOMETIMES">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </Region>
+        <Button focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#registerUserButtonAction" prefHeight="40.0" prefWidth="160.0" text="Register User" VBox.vgrow="NEVER">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+        <Label fx:id="resultLabel" text="Here a message is displayed!" VBox.vgrow="NEVER">
+            <VBox.margin>
+                <Insets bottom="-10.0" top="-10.0" />
+            </VBox.margin>
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+    </children>
+    <padding>
+        <Insets bottom="30.0" left="100.0" right="100.0" top="30.0" />
+    </padding>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+</VBox>

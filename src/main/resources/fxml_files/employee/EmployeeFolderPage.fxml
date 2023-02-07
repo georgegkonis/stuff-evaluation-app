@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="945.0" prefWidth="1309.0" spacing="20.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.user_interface.employee_interface.EmployeeFolderPageController">
+    <children>
+        <Label alignment="CENTER" text="Employee Folder">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+        </Label>
+      <VBox spacing="10.0">
+         <children>
+            <Label text="Resume:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="-5.0" />
+               </padding>
+            </Label>
+            <TextArea fx:id="resumeArea" prefHeight="201.0" prefWidth="534.0" promptText="Enter Resume" />
+         </children>
+      </VBox>
+      <GridPane vgap="10.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS" percentWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1054.799951171875" minWidth="10.0" prefWidth="565.1999755859374" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="634.800048828125" minWidth="10.0" percentWidth="56.0" prefWidth="544.4000244140625" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints fillHeight="false" maxHeight="0.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+            <RowConstraints fillHeight="false" vgrow="SOMETIMES" />
+            <RowConstraints fillHeight="false" vgrow="SOMETIMES" />
+            <RowConstraints fillHeight="false" vgrow="SOMETIMES" />
+            <RowConstraints fillHeight="false" vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints fillHeight="false" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TextField fx:id="referencesField" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" promptText="Enter References" GridPane.rowIndex="2" />
+            <Label text="Certificates:" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="-5.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="certificatesField" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" promptText="Enter Certificates" GridPane.rowIndex="4" />
+            <Label text="Awards:" GridPane.rowIndex="5">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="-5.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="awardsField" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" promptText="Enter Awards" GridPane.rowIndex="6" />
+            <HBox spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <children>
+                  <ComboBox fx:id="languageComboBox" focusTraversable="false" minWidth="-Infinity" prefHeight="40.0" promptText="Select Languages" />
+                  <Button contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addLangButtonClicked" prefHeight="40.0" prefWidth="40.0" text="+" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <ListView fx:id="languageListView" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" orientation="HORIZONTAL" prefHeight="40.0" HBox.hgrow="SOMETIMES" />
+                  <Button contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#removeLangButtonClicked" prefHeight="40.0" prefWidth="40.0" text="-" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Label text="Degrees:" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="-5.0" />
+               </GridPane.margin>
+            </Label>
+            <HBox spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <children>
+                  <ListView fx:id="degreeListView" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" orientation="HORIZONTAL" prefHeight="40.0" HBox.hgrow="SOMETIMES" />
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#addDegreeButtonClicked" prefHeight="40.0" prefWidth="120.0" text="Add Degree" />
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#removeDegreeButtonClicked" prefHeight="40.0" prefWidth="120.0" text="Remove Degree" />
+               </children>
+            </HBox>
+            <Label text="Projects:" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="-5.0" />
+               </GridPane.margin>
+            </Label>
+            <HBox spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <children>
+                  <ListView fx:id="projectListView" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" orientation="HORIZONTAL" prefHeight="40.0" HBox.hgrow="SOMETIMES" />
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#addProjectButtonClicked" prefHeight="40.0" prefWidth="120.0" text="Add Project" />
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#removeProjectButtonClicked" prefHeight="40.0" prefWidth="120.0" text="Remove Project" />
+               </children>
+            </HBox>
+            <Label text="References:" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="-5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Languages:" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="-5.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+      <Separator>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Separator>
+      <Region maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="SOMETIMES" />
+      <Button focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#updateButtonClicked" prefHeight="40.0" prefWidth="160.0" text="Update Folder">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Label fx:id="resultLabel" text="Here a message is displayed!">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="-10.0" top="-10.0" />
+         </VBox.margin>
+      </Label>
+    </children>
+    <padding>
+        <Insets bottom="30.0" left="100.0" right="100.0" top="30.0" />
+    </padding>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+</VBox>

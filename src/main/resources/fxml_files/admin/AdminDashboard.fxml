@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane fx:id="adminBorderPane" prefHeight="660.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.user_interface.admin_interface.AdminDashboardController">
+    <center>
+        <Pane />
+    </center>
+    <left>
+        <VBox alignment="TOP_CENTER" spacing="20.0" style="-fx-background-color: #e6e6e6;" BorderPane.alignment="CENTER">
+            <children>
+                <Button alignment="CENTER" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addUserButtonClicked" prefHeight="40.0" prefWidth="250.0" text="Register New User" VBox.vgrow="SOMETIMES">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+                <Button alignment="CENTER" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addCompanyButtonClicked" prefHeight="40.0" prefWidth="250.0" text="Register New Company" VBox.vgrow="SOMETIMES">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+                <Button alignment="CENTER" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addJobFieldButtonClicked" prefHeight="40.0" prefWidth="250.0" text="Register New Job Field" VBox.vgrow="SOMETIMES">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+            <Separator prefWidth="200.0" />
+                <Button alignment="CENTER" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#viewLogButtonClicked" prefHeight="40.0" prefWidth="250.0" text="View Action Log" VBox.vgrow="SOMETIMES">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+            </children>
+            <padding>
+                <Insets left="20.0" right="20.0" top="100.0" />
+            </padding>
+        </VBox>
+    </left>
+</BorderPane>

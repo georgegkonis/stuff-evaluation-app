@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="managerBorderPane" prefHeight="660.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.user_interface.manager_interface.ManagerDashboardController">
+    <center>
+        <Pane />
+    </center>
+    <left>
+        <VBox alignment="TOP_CENTER" spacing="20.0" style="-fx-background-color: #e6e6e6;" BorderPane.alignment="CENTER">
+            <children>
+            <Label fx:id="companyNameLabel" text="Company">
+               <font>
+                  <Font name="Verdana Bold" size="25.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" />
+                <Button alignment="CENTER" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#viewCompanyButtonCLicked" prefHeight="40.0" prefWidth="250.0" text="View Company" VBox.vgrow="SOMETIMES">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+                <Button alignment="CENTER" focusTraversable="false" layoutX="30.0" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#viewPositionsButtonClicked" prefHeight="40.0" prefWidth="250.0" text="View Positions">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+            <Button alignment="CENTER" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#viewEvaluationsButtonClicked" prefHeight="40.0" prefWidth="250.0" text="View Evaluations">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+                <Separator prefWidth="200.0" />
+                <Button alignment="CENTER" focusTraversable="false" layoutX="30.0" layoutY="230.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#viewEvaluatorsButtonClicked" prefHeight="40.0" prefWidth="250.0" text="View Evaluators">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+                <Button alignment="CENTER" focusTraversable="false" layoutX="30.0" layoutY="290.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#viewEmployeesButtonClicked" prefHeight="40.0" prefWidth="250.0" text="View Employees">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+            </children>
+            <padding>
+                <Insets left="20.0" right="20.0" top="50.0" />
+            </padding>
+        </VBox>
+    </left>
+</BorderPane>
